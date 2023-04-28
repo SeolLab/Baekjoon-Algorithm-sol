@@ -3,9 +3,7 @@
 #include <iostream>
 using namespace std;
 int n, m;
-int arr[8];
-bool isused[8];
-
+int arr[7];
 void refunc(int k) {
 	if (k == m) {
 		for (int i = 0; i < m; i++)
@@ -15,10 +13,7 @@ void refunc(int k) {
 	}
 	for (int i = 1; i <= n; i++) {
 		arr[k] = i;
-		isused[i] = 1;
 		refunc(k + 1);
-		isused[i] = 0;
-		
 	}
 }
 int main(void) {
